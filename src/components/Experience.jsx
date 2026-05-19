@@ -1,158 +1,116 @@
-import { MapPinIcon, CalendarIcon } from './Icons'
-
 const jobs = [
   {
-    title: 'Frontend Developer (Remote)',
+    title: 'Frontend Developer',
     company: 'PixupPlay',
-    location: 'Malta',
-    period: 'May 2025 – Present',
+    location: 'Malta · Remote',
+    period: '2025 — Present',
     current: true,
-    description: 'B2B iGaming platform serving casino, sportsbook, exchange betting, and payment integration.',
     bullets: [
-      'Engineered React-based UI for a real-time iGaming platform supporting 3+ product verticals: casino, sportsbook, and exchange betting',
-      'Consumed and integrated RESTful APIs for authentication, promotions, game sessions, transactions, and analytics modules',
-      'Connected 5+ external game providers and sportsbook feeds via secure API communication',
-      'Delivered 10+ reusable UI components for raffles, daily races, and bonus campaigns, reducing feature delivery time by ~30%',
-      'Coordinated with backend engineers to align API contracts and reduce integration defects by over 40%',
+      'Built React UI for real-time iGaming platform — casino, sportsbook, exchange betting',
+      'Integrated 5+ external game providers via RESTful APIs',
+      'Delivered 10+ reusable components, cut feature delivery time by ~30%',
+      'Reduced integration defects by 40% through tight backend coordination',
     ],
   },
   {
     title: 'Frontend Developer',
-    company: 'Innovation and Digital Development Agency (IDDA)',
+    company: 'IDDA',
     location: 'Baku, Azerbaijan',
-    period: 'Apr 2023 – May 2025',
+    period: '2023 — 2025',
     bullets: [
-      'Led frontend development for a multi-part cybersecurity platform covering admin panel, core tool, and marketing landing page',
-      'Adopted Next.js SSR for the landing page, achieving measurable improvements in page load speed and SEO ranking',
-      'Built advanced data tables and interactive charts handling 100,000+ records',
-      'Applied Material-UI and Tailwind CSS across 3 platform modules to maintain consistent, accessible UI standards',
-      'Architected a multi-level dynamic filtering system, reducing user search time by an estimated 50%',
-      'Performed regular code reviews and performance audits, maintaining fewer than 5% regression defects',
+      'Led frontend for a multi-module cybersecurity platform (admin, core tool, landing)',
+      'Next.js SSR landing — improved load speed and SEO rankings',
+      'Data tables handling 100,000+ records with interactive analytics charts',
+      'Dynamic filtering system cut analyst search time by ~50%',
+      'Regular code reviews — <5% regression rate across sprints',
     ],
   },
   {
-    title: 'Frontend Developer (Remote)',
+    title: 'Frontend Developer',
     company: 'Nevera Tech',
-    location: 'Istanbul, Turkey',
-    period: 'Feb 2023 – Jan 2024',
+    location: 'Istanbul · Remote',
+    period: '2023 — 2024',
     bullets: [
-      'Contributed to 6+ web projects spanning course management, e-commerce, and a football social platform',
-      'Shipped responsive React and TypeScript applications aligned with Figma mockups within 2-week sprint cycles',
-      'Consumed Node.js REST APIs to enable smooth data flow between frontend views and backend services',
-      'Reduced UI bug backlog by 35% through proactive QA collaboration and component-level unit testing',
+      '6+ projects: course platform, e-commerce, football social app',
+      'React + TypeScript, Figma-aligned, 2-week sprints',
+      'Reduced UI bug backlog by 35% via QA collaboration',
     ],
   },
   {
-    title: 'Frontend Developer (Remote)',
+    title: 'Frontend Developer',
     company: 'Rntr.',
-    location: 'Alexandria, NSW, Australia',
-    period: 'Aug 2023 – Sep 2023',
+    location: 'Australia · Remote',
+    period: 'Aug — Sep 2023',
     bullets: [
-      'Wrote modular vanilla JavaScript and CSS scripts for a fashion-industry rental and sales platform',
-      'Coded 15+ UI elements from scratch, improving product page engagement and visual consistency',
-      'Resolved 10+ technical issues within legacy codebase and integrated 3 third-party APIs on schedule',
+      'Vanilla JS & CSS for a fashion rental/sales platform',
+      '15+ UI components from scratch, 3 third-party API integrations',
     ],
   },
   {
-    title: 'Frontend Developer – Freelance',
+    title: 'Frontend Developer',
     company: 'Avirtel Limited',
-    location: 'Remote',
-    period: 'Nov 2021 – Feb 2023',
+    location: 'Remote · Freelance',
+    period: '2021 — 2023',
     bullets: [
-      'Produced reusable UI components and resolved 20+ bugs, improving application stability across 4 client projects',
-      'Optimized rendering performance, reducing average page load time by approximately 25%',
+      '20+ bugs resolved across 4 client projects',
+      'Reduced page load time by ~25% via render optimization',
     ],
   },
   {
     title: 'Frontend Developer',
     company: 'Koder Group',
-    location: 'Baku, Azerbaijan',
-    period: 'Jul 2021 – Nov 2021',
-    bullets: [
-      'Constructed interfaces for navigation, data management, and e-commerce flows, serving 1,000+ end users',
-      'Refined page layouts and visual design to strengthen brand identity and improve navigation clarity',
-    ],
+    location: 'Baku',
+    period: 'Jul — Nov 2021',
+    bullets: ['Navigation, data management & e-commerce UI serving 1,000+ users'],
   },
   {
     title: 'Frontend Developer',
     company: 'Khanbuta Group',
-    location: 'Baku, Azerbaijan',
-    period: 'Mar 2021 – Jun 2021',
-    bullets: [
-      'Shipped responsive, cross-browser-compatible features for company web applications',
-      'Improved UX across 5+ pages by refining layout structure and interaction patterns',
-    ],
+    location: 'Baku',
+    period: 'Mar — Jun 2021',
+    bullets: ['Responsive, cross-browser features; improved UX across 5+ pages'],
   },
   {
-    title: 'Frontend Developer (Intern)',
+    title: 'Intern',
     company: 'Onneks Lab',
-    location: 'Baku, Azerbaijan',
-    period: 'Oct 2020 – Nov 2020',
-    bullets: [
-      'Completed 10+ assigned HTML, CSS, and JavaScript tasks, receiving positive feedback on code quality',
-      'Acquired core frontend skills and adopted professional coding standards within the first month',
-    ],
+    location: 'Baku',
+    period: 'Oct — Nov 2020',
+    bullets: ['First professional role — HTML, CSS, JS; positive feedback on code quality'],
   },
 ]
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 bg-[#0f172a]/50">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-sky-400 font-mono text-sm mb-2">// where I've worked</p>
-          <h2 className="text-4xl font-bold gradient-text">Work Experience</h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-sky-500 to-blue-400 rounded mx-auto mt-4" />
-        </div>
+    <section id="experience" className="py-24 px-6 border-t border-gray-200 bg-[#f9f9f9]">
+      <div className="max-w-6xl mx-auto">
+        <p className="text-[#ff3c00] text-xs font-bold tracking-widest uppercase mb-4">Experience</p>
+        <h2 className="text-4xl md:text-5xl font-black text-[#111] mb-16">Where I've worked.</h2>
 
-        <div className="relative">
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-sky-500 via-sky-500/30 to-transparent hidden md:block" />
-
-          <div className="space-y-8">
-            {jobs.map((job, i) => (
-              <div key={i} className="relative md:pl-16">
-                <div className={`absolute left-4 top-6 w-4 h-4 rounded-full border-2 hidden md:block ${
-                  job.current
-                    ? 'bg-sky-400 border-sky-400 shadow-lg shadow-sky-400/50'
-                    : 'bg-[#0a0f1e] border-sky-500/50'
-                }`} />
-
-                <div className="card group">
-                  <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
-                    <div>
-                      <h3 className="text-white font-semibold text-lg group-hover:text-sky-400 transition-colors">
-                        {job.title}
-                      </h3>
-                      <p className="text-sky-400 font-medium">{job.company}</p>
-                    </div>
-                    <div className="text-right text-sm text-slate-500 space-y-1">
-                      <div className="flex items-center gap-1 justify-end">
-                        <CalendarIcon size={12} />
-                        <span className={job.current ? 'text-green-400' : ''}>{job.period}</span>
-                      </div>
-                      <div className="flex items-center gap-1 justify-end">
-                        <MapPinIcon size={12} />
-                        <span>{job.location}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {job.description && (
-                    <p className="text-slate-400 text-sm mb-3 italic">{job.description}</p>
-                  )}
-
-                  <ul className="space-y-2">
-                    {job.bullets.map((b, j) => (
-                      <li key={j} className="flex gap-2 text-slate-400 text-sm">
-                        <span className="text-sky-400 mt-1 shrink-0">▸</span>
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+        <div>
+          {jobs.map((job, i) => (
+            <div key={i} className="grid md:grid-cols-[220px_1fr] gap-6 border-t border-gray-200 py-10 group">
+              <div>
+                <p className={`text-sm font-bold mb-1 ${job.current ? 'text-[#ff3c00]' : 'text-[#555]'}`}>
+                  {job.period}
+                </p>
+                <p className="text-[#888] text-xs font-medium">{job.location}</p>
               </div>
-            ))}
-          </div>
+              <div>
+                <div className="flex items-baseline gap-3 mb-4">
+                  <h3 className="text-[#111] font-black text-xl group-hover:text-[#ff3c00] transition-colors">{job.company}</h3>
+                  <span className="text-[#666] text-sm font-medium">{job.title}</span>
+                </div>
+                <ul className="space-y-2">
+                  {job.bullets.map((b, j) => (
+                    <li key={j} className="text-[#444] text-sm flex gap-3 leading-relaxed">
+                      <span className="text-[#ff3c00] shrink-0 mt-0.5 font-bold">—</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

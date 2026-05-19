@@ -1,72 +1,51 @@
 import { useState, useEffect } from 'react'
-import { MenuIcon, XIcon } from './Icons'
 
-const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
-  { label: 'Contact', href: '#contact' },
-]
+const links = ['About', 'Skills', 'Experience', 'Contact']
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
+    const fn = () => setScrolled(window.scrollY > 40)
+    window.addEventListener('scroll', fn)
+    return () => window.removeEventListener('scroll', fn)
   }, [])
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[#0a0f1e]/95 backdrop-blur-md border-b border-slate-700/50' : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#home" className="font-mono text-xl font-bold text-sky-400">
-          &lt;Samir /&gt;
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm border-b border-gray-200' : 'bg-transparent'}`}>
+      <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+        <a href="#home" className="text-[#111] font-black text-xl tracking-tight">
+          SS<span className="text-[#ff3c00]">.</span>
         </a>
 
-        <ul className="hidden md:flex gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-slate-400 hover:text-sky-400 transition-colors duration-200 text-sm font-medium"
-              >
-                {link.label}
+        <ul className="hidden md:flex gap-10">
+          {links.map(l => (
+            <li key={l}>
+              <a href={`#${l.toLowerCase()}`} className="text-[#555] hover:text-[#111] text-sm font-semibold transition-colors">
+                {l}
               </a>
             </li>
           ))}
         </ul>
 
-        <button
-          className="md:hidden text-slate-400 hover:text-sky-400"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
+
+        <button className="md:hidden" onClick={() => setOpen(!open)}>
+          <div className="space-y-1.5">
+            <span className={`block w-6 h-0.5 bg-[#111] transition-all ${open ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`block h-0.5 bg-[#111] transition-all ${open ? 'opacity-0 w-0' : 'w-4'}`} />
+            <span className={`block w-6 h-0.5 bg-[#111] transition-all ${open ? '-rotate-45 -translate-y-2' : ''}`} />
+          </div>
         </button>
       </div>
 
-      {menuOpen && (
-        <div className="md:hidden bg-[#0f172a] border-t border-slate-700/50 px-6 py-4">
-          <ul className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="text-slate-400 hover:text-sky-400 transition-colors duration-200"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+      {open && (
+        <div className="md:hidden bg-white border-t border-gray-200 px-6 py-6 space-y-4">
+          {links.map(l => (
+            <a key={l} href={`#${l.toLowerCase()}`} className="block text-[#333] hover:text-[#ff3c00] font-semibold text-base" onClick={() => setOpen(false)}>
+              {l}
+            </a>
+          ))}
         </div>
       )}
     </nav>
