@@ -1,81 +1,80 @@
 const jobs = [
   {
-    title: 'Frontend Developer',
+    title: 'Full Stack Developer',
     company: 'PixupPlay',
     location: 'Malta · Remote',
-    period: '2025 — Present',
-    current: true,
+    period: '2025 - 2026',
+    current: false,
     bullets: [
-      'Built React UI for real-time iGaming platform — casino, sportsbook, exchange betting',
-      'Integrated 5+ external game providers via RESTful APIs',
-      'Delivered 10+ reusable components, cut feature delivery time by ~30%',
-      'Reduced integration defects by 40% through tight backend coordination',
+      'Engineered scalable full-stack applications with React, Node.js, and Express',
+      'Architected and implemented backend APIs covering authentication, promotions, game sessions, transactions, and analytics',
+      'Integrated external game providers and sportsbook feeds through secure API communication',
+      'Developed UI components for raffles, daily races, and bonus campaigns with full backend integration',
+      'Managed user data, betting records, game logs, and campaign histories using MongoDB',
     ],
   },
   {
     title: 'Frontend Developer',
     company: 'IDDA',
     location: 'Baku, Azerbaijan',
-    period: '2023 — 2025',
+    period: '2023 - 2025',
     bullets: [
-      'Led frontend for a multi-module cybersecurity platform (admin, core tool, landing)',
-      'Next.js SSR landing — improved load speed and SEO rankings',
-      'Data tables handling 100,000+ records with interactive analytics charts',
-      'Dynamic filtering system cut analyst search time by ~50%',
-      'Regular code reviews — <5% regression rate across sprints',
+      'Led frontend development for a multi-module cybersecurity platform covering admin panel, core tool, and SSR landing page',
+      'Engineered advanced data tables and interactive charts to handle large-scale datasets',
+      'Architected a multi-level filtering system that significantly reduced analyst search time',
+      'Conducted regular code reviews and performance audits within a cross-functional team',
     ],
   },
   {
     title: 'Frontend Developer',
     company: 'Nevera Tech',
     location: 'Istanbul · Remote',
-    period: '2023 — 2024',
+    period: '2023 - 2024',
     bullets: [
-      '6+ projects: course platform, e-commerce, football social app',
-      'React + TypeScript, Figma-aligned, 2-week sprints',
-      'Reduced UI bug backlog by 35% via QA collaboration',
+      'Delivered multiple projects including a course platform, e-commerce store, and football social app',
+      'Shipped React and TypeScript applications aligned with Figma designs within short sprint cycles',
     ],
   },
   {
     title: 'Frontend Developer',
     company: 'Rntr.',
     location: 'Australia · Remote',
-    period: 'Aug — Sep 2023',
+    period: 'Aug 2023 - Sep 2023',
     bullets: [
-      'Vanilla JS & CSS for a fashion rental/sales platform',
-      '15+ UI components from scratch, 3 third-party API integrations',
+      'Crafted a suite of reusable UI components for a fashion rental platform using vanilla JavaScript and CSS',
+      'Integrated multiple third-party APIs within a short-term contract',
     ],
   },
   {
     title: 'Frontend Developer',
     company: 'Avirtel Limited',
     location: 'Remote · Freelance',
-    period: '2021 — 2023',
+    period: '2021 - 2023',
     bullets: [
-      '20+ bugs resolved across 4 client projects',
-      'Reduced page load time by ~25% via render optimization',
+      'Maintained and enhanced UI components across multiple client projects',
+      'Resolved rendering performance issues and cleared backlog bugs across deliverables',
     ],
   },
   {
     title: 'Frontend Developer',
     company: 'Koder Group',
     location: 'Baku',
-    period: 'Jul — Nov 2021',
-    bullets: ['Navigation, data management & e-commerce UI serving 1,000+ users'],
+    period: 'Jul 2021 - Nov 2021',
+    bullets: ['Developed e-commerce and data management interfaces serving a large end-user base'],
   },
   {
     title: 'Frontend Developer',
     company: 'Khanbuta Group',
     location: 'Baku',
-    period: 'Mar — Jun 2021',
-    bullets: ['Responsive, cross-browser features; improved UX across 5+ pages'],
+    period: 'Mar 2021 - Jun 2021',
+    bullets: ['Shipped responsive, cross-browser-compatible features for company web applications'],
   },
   {
-    title: 'Intern',
+    title: 'Frontend Developer Intern',
     company: 'Onneks Lab',
     location: 'Baku',
-    period: 'Oct — Nov 2020',
-    bullets: ['First professional role — HTML, CSS, JS; positive feedback on code quality'],
+    period: 'Oct 2020 - Nov 2020',
+    bullets: ['Completed HTML, CSS, and JS tasks; adopted professional coding standards'],
   },
 ]
 
@@ -103,7 +102,7 @@ export default function Experience() {
                 <ul className="space-y-2">
                   {job.bullets.map((b, j) => (
                     <li key={j} className="text-[#444] text-sm flex gap-3 leading-relaxed">
-                      <span className="text-[#ff3c00] shrink-0 mt-0.5 font-bold">—</span>
+                      <span className="text-[#ff3c00] shrink-0 mt-1.5 text-xs">●</span>
                       <span>{b}</span>
                     </li>
                   ))}

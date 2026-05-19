@@ -14,7 +14,7 @@ export default function About() {
             I'm a frontend developer with <span className="text-[#111] font-bold">5+ years</span> of experience across iGaming, cybersecurity, and e-commerce. I care about clean code, fast UIs, and shipping things that work.
           </p>
           <p className="text-[#333] text-base leading-relaxed">
-            Currently at <span className="text-[#111] font-bold">PixupPlay (Malta)</span> building real-time betting interfaces with React. Previously led frontend at <span className="text-[#111] font-bold">IDDA</span> — full cybersecurity platform with 100k+ row data tables, SSR landing, admin panel.
+            Currently at <span className="text-[#111] font-bold">PixupPlay (Malta)</span> building real-time betting interfaces with React. Previously led frontend at <span className="text-[#111] font-bold">IDDA</span>, delivering a full cybersecurity platform with large-scale data tables, SSR landing, and admin panel.
           </p>
           <p className="text-[#333] text-base leading-relaxed">
             Comfortable with Agile, code reviews, multi-timezone teams, and tight sprint deadlines.
